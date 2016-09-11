@@ -3,7 +3,7 @@ from django.contrib import admin
 from rest_framework import routers
 from polls import views
 
-router = routers.DefaultRouter()
+router = routers.DefaultRouter(schema_title='polls')
 router.register('questions', views.QuestionViewSet)
 
 urlpatterns = [
